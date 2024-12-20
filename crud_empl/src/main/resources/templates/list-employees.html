@@ -14,6 +14,18 @@
 
 <br>
 <div class="container">
+
+<a th:href="@{/employees/addNewEmployee}" class="btn btn-primary btn-sm mb-3">
+    Add new employee
+<!--    в теге a добавляется ссылка для перехода на другую страницу на форме-->
+<!--    href указывает страницу в браузере, на которую необходимо переходить-->
+<!--    т.е. сначала указывается верхний уровень /employees, а затем /addNewEmployee-->
+<!--добавляя class="btn btn-primary btn-sm mb-3" мы добиваемся того чтобы: ссылка -->
+<!--    Add new employee выглядела как кнопка, эта кнопка была синего цвета (btn-primary),-->
+<!--  эта кнопка была маленькой (btn-sm),  чтобы между этой -->
+<!--    кнопкой и таблицей было 3 внешних отступа (mb-3) -->
+</a>
+
     <table class="table table-borderes table-striped">
 <!--        Добавляем таблицу-->
        <thead class="table-dark">
