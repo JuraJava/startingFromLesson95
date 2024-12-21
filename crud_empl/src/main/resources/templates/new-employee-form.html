@@ -20,6 +20,10 @@
 <!--    всё что указано в теге p это обычная строка-->
     <form action="#" th:action="@{/employees/save}" th:object="${employee}" method="post">
 <!--Далее добавляем поля на эту форму-->
+
+        <input type="hidden" th:field="*{id}">
+<!--        hidden потому что это поле у нас на форме будет скрытым-->
+
         <input type="text" th:field="*{lastName}" placeholder="Last name" class="form-control mb-4 w-25">
 <!--        w-25 - это ширина страницы-->
         <input type="text" th:field="*{firstName}" placeholder="First name" class="form-control mb-4 w-25">
