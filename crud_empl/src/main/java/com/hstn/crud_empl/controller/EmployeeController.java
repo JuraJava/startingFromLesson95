@@ -43,6 +43,14 @@ public class EmployeeController {
         return "new-employee-form";
     }
 
+    @GetMapping("/delete")
+    public String deleteEmployee(@RequestParam("employeeId") int employeeId) {
+        employeeService.deleteEmployeeById(employeeId);
+        return "redirect:/employees/list";
+        // после того как мы удалим сотрудника нам необходимо обновить
+        // страницу, поэтому мы переходим на "redirect:/employees/list"
+    }
+
     @PostMapping("/save")
     public String saveEmployee(@ModelAttribute("employee") Employee employee) {
         employeeService.save(employee);

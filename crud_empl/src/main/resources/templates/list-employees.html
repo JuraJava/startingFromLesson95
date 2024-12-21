@@ -39,7 +39,8 @@
            <th>First name</th>
            <th>Email</th>
 
-           <th>Update</th>
+           <th>Action</th>
+           <th>Action</th>
 
        </tr>
        </thead>
@@ -59,6 +60,12 @@
                     Update
 <!--                    Когда мы жмём эту кнопку-ссылку мы передаём параметр id, -->
 <!--                    т.е. мы показываем что нам необходимо обновить данные у сотрудника с этим id-->
+                </a>
+            </td>
+
+            <td>
+                <a th:href="@{/employees/delete(employeeId=${oneEmployee.id})}">
+                    Delete
                 </a>
             </td>
 
