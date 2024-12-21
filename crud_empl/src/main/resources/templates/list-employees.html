@@ -38,6 +38,9 @@
            <th>Last name</th>
            <th>First name</th>
            <th>Email</th>
+
+           <th>Update</th>
+
        </tr>
        </thead>
         <tbody>
@@ -50,6 +53,13 @@
             <td th:text="${oneEmployee.lastName}"></td>
             <td th:text="${oneEmployee.firstName}"></td>
             <td th:text="${oneEmployee.email}"></td>
+
+            <td>
+                <a th:href="@{/employees/updateEmployee(employeeId=${oneEmployee.id})}">
+                    Update
+                </a>
+            </td>
+
         </tr>
         </tbody>
     </table>
